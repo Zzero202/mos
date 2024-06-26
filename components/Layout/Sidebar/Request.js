@@ -6,14 +6,14 @@ function Request() {
       <Text style={styles.requestTitle}>استدعاء</Text>
       <View style={styles.requestMainBox}>
         <TouchableOpacity style={styles.requestBox}>
-          <Text style={styles.requestText}>الشثري</Text>
+          <Text style={styles.requestText}>محمد العون</Text>
           <Image
             source={require('../../../assets/shtry.png')}
             style={styles.requestImage}
           />
         </TouchableOpacity>
         <TouchableOpacity style={styles.requestBox}>
-          <Text style={styles.requestText}>الداوود</Text>
+          <Text style={styles.requestText}>عبدالله الدريس</Text>
           <Image
             style={styles.requestImage}
             source={require('../../../assets/dawood.png')}

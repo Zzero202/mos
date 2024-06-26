@@ -1,11 +1,14 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-function OrderItem({title, image}) {
+function OrderItem({title, image}) { //onPress
   return (
+    //onPress={onPress}
     <View style={styles.card}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.text}>{title}</Text>
+      <TouchableOpacity > 
+        <Image source={image} style={styles.image} />
+        <Text style={styles.text}>{title}</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -35,7 +38,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 20,
     color: '#000',
-    fontFamily:'Tajawal-Regular'
+    fontFamily: 'Tajawal-Regular',
   },
 });
 export default OrderItem;

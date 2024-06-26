@@ -4,14 +4,70 @@ import OrderItem from './OrderItem';
 
 function Orders() {
   const data = [
-    {id: '1', title: 'إسبريسو', image: require('../../../assets/cat1.png')},
-    {id: '2', title: 'ينسون', image: require('../../../assets/cat2.png')},
-    {id: '3', title: 'شاي أخضر', image: require('../../../assets/cat3.png')},
-    {id: '4', title: 'مياة', image: require('../../../assets/cat4.png')},
-    {id: '5', title: 'الأكل', image: require('../../../assets/cat5.png')},
-    {id: '6', title: 'الإفطار', image: require('../../../assets/cat6.png')},
-    {id: '7', title: 'بلاك كوفي', image: require('../../../assets/cat7.png')},
-    {id: '8', title: 'قهوة سعودية', image: require('../../../assets/cat8.png')},
+    {
+      id: '1',
+      title: 'قهوة سعودية',
+      image: require('../../../assets/coffee.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    {
+      id: '2',
+      title: 'شاهي',
+      image: require('../../../assets/shai.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    {
+      id: '3',
+      title: 'تمر',
+      image: require('../../../assets/nuts.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    {
+      id: '4',
+      title: 'مياه غازية',
+      image: require('../../../assets/water.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    // {
+    //   id: '5',
+    //   title: 'الأكل',
+    //   image: require('../../../assets/cat5.png'),
+    //   // press: () => {
+    //   //   fetch('https').then(res => console.log(res));
+    //   // },
+    // },
+    // {
+    //   id: '6',
+    //   title: 'الإفطار',
+    //   image: require('../../../assets/cat6.png'),
+    //   // press: () => {
+    //   //   fetch('https').then(res => console.log(res));
+    //   // },
+    // },
+    // {
+    //   id: '7',
+    //   title: 'بلاك كوفي',
+    //   image: require('../../../assets/cat7.png'),
+    //   // press: () => {
+    //   //   fetch('https').then(res => console.log(res));
+    //   // },
+    // },
+    // {
+    //   id: '8',
+    //   title: 'قهوة سعودية',
+    //   image: require('../../../assets/cat8.png'),
+    //   // press: () => {
+    //   //   fetch('https').then(res => console.log(res));
+    //   // },
+    // },
   ];
   return (
     <View style={styles.mainOrders}>
@@ -25,7 +81,9 @@ function Orders() {
         }}>
         {data.map(item => {
           return (
-            <OrderItem key={item.id} title={item.title} image={item.image} />
+            <OrderItem key={item.id} title={item.title} image={item.image}
+            //  onPress={item.press}
+             />
           );
         })}
       </View>

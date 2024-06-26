@@ -1,29 +1,50 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import PeopleRequestItem from './PeopleRequestItem';
+import axios from 'axios';
+import {HubConnectionBuilder, LogLevel} from '@microsoft/signalr';
 function PeopleRequest() {
+  const [resetConnection, setResetConnection] = useState(false);
+  const connection = new HubConnectionBuilder()
+    .withUrl(
+      'https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/chathub',
+    )
+    .configureLogging(LogLevel.Debug)
+    .build();
+
+  useEffect(() => {
+    connection.start().then(() => {
+      connection.onclose(async () => {
+        console.log('Closed');
+        setResetConnection(prevState => !prevState);
+      });
+      connection.on('ReturnText', function (data) {
+        console.log('This is the response from SignalR' + data);
+      });
+    });
+  }, []);
   const data = [
     {
       id: 1,
-      name: 'معالي النائب',
+      name: 'إبراهيم المعيقل',
       image: require('../../../assets/naeb.png'),
-      // press: () => {
-      //   //   fetch('https')
-      //   //     .then(res => {
-      //   //       console.log('data');
-      //   //     })
-      //   //     .catch(err => {
-      //   //       console.log(err);
-      //   //     });
-      //   // },
-      // },
+      press: () => {
+        axios
+          .post(
+            'https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/api/RequestAttends/ReturnText?Text=معالي النائب',
+          )
+          .then(res => {
+            console.log(res);
+          })
+          .catch(e => console.log(e));
+      },
     },
     {
       id: 2,
-      name: 'معالي المساعد',
+      name: 'وليد بن حزيم',
       image: require('../../../assets/mosaed.png'),
       // press: () => {
-      //   fetch('https')
+      //   fetch('https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/api/RequestAttends/ReturnText?Text=Hello')
       //     .then(res => {
       //       console.log('data');
       //     })
@@ -34,7 +55,7 @@ function PeopleRequest() {
     },
     {
       id: 3,
-      name: 'وكيل السياسية',
+      name: 'نواف الشهراني',
       image: require('../../../assets/wakelsyasa.png'),
       // press: () => {
       //   fetch('https')
@@ -48,7 +69,7 @@ function PeopleRequest() {
     },
     {
       id: 4,
-      name: 'وكيل المتعددة',
+      name: 'عبدالله الدريس',
       image: require('../../../assets/wakemotaded.png'),
       // press: () => {
       //   fetch('https')
@@ -62,7 +83,7 @@ function PeopleRequest() {
     },
     {
       id: 5,
-      name: 'وكيل الدبلوماسية العامة',
+      name: 'محمد العنقري',
       image: require('../../../assets/wakeldoplamicia.png'),
       // press: () => {
       //   fetch('https')
@@ -76,7 +97,7 @@ function PeopleRequest() {
     },
     {
       id: 6,
-      name: 'وكيل المراسم',
+      name: 'أحمد حكمي',
       image: require('../../../assets/wakelmarasem.png'),
       // press: () => {
       //   fetch('https')
@@ -90,7 +111,7 @@ function PeopleRequest() {
     },
     {
       id: 7,
-      name: 'وكيل الشؤون العامة',
+      name: 'عبده العبسي',
       image: require('../../../assets/wakelshoon.png'),
       // press: () => {
       //   fetch('https')
@@ -104,7 +125,7 @@ function PeopleRequest() {
     },
     {
       id: 8,
-      name: 'التخطيط الإستراتيجي',
+      name: 'احمد هوساوي',
       image: require('../../../assets/takhtet.png'),
       // press: () => {
       //   fetch('https')
@@ -117,7 +138,7 @@ function PeopleRequest() {
       // },
     },
   ];
-
+  // console.log('ADADADA');
   return (
     <View style={{marginTop: 16}}>
       <Text style={styles.requestTitle}>طلب أشخاص</Text>
@@ -128,7 +149,7 @@ function PeopleRequest() {
               key={item.id}
               name={item.name}
               image={item.image}
-              // onPress={item.press}
+              onPress={item.press}
             />
           );
         })}

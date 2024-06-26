@@ -1,13 +1,11 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-function PeopleRequestItem({name, image}) { //onPress
+function PeopleRequestItem({name, image, onPress}) {
+  //onPress
   return (
     <View>
-      <TouchableOpacity
-        style={styles.requestBox}
-        //  onPress={onPress}
-      >
+      <TouchableOpacity style={styles.requestBox} onPress={onPress}>
         <Text style={styles.requestText}>{name}</Text>
         <Image source={image} style={styles.requestImage} />
       </TouchableOpacity>
