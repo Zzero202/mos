@@ -1,11 +1,12 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-function OrderItem({title, image}) { //onPress
+function OrderItem({title, image}) {
+  //onPress
   return (
     //onPress={onPress}
     <View style={styles.card}>
-      <TouchableOpacity > 
+      <TouchableOpacity>
         <Image source={image} style={styles.image} />
         <Text style={styles.text}>{title}</Text>
       </TouchableOpacity>
@@ -14,7 +15,7 @@ function OrderItem({title, image}) { //onPress
 }
 const styles = StyleSheet.create({
   card: {
-    width: 200,
+    width: 180,
     height: 158,
     borderRadius: 10,
     backgroundColor: '#fff',
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   image: {
-    width: '100%',
+    width: 180,
     height: 100,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#000',
     fontFamily: 'Tajawal-Regular',
+    textAlign:'center'
   },
 });
 export default OrderItem;
