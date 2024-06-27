@@ -25,14 +25,12 @@ function LogoFullScreen() {
   return (
     <ImageBackground
       style={styles.backgroundImage}
-      source={require('../assets/logo.png')}>
-        
-      </ImageBackground>
+      source={require('../assets/logo.png')}></ImageBackground>
   );
 }
 const styles = StyleSheet.create({
   backgroundImage: {
-    flex:1,
+    flex: 1,
   },
 });
 export default LogoFullScreen;
