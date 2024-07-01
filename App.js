@@ -6,8 +6,8 @@ import {View} from 'react-native';
 function App() {
   return (
     <View style={{width: 1190, height: 800}}>
-      <LogoFullScreen />
-      {/* <MinisterOfSportsScreen  /> */}
+      {/* <LogoFullScreen /> */}
+      <MinisterOfSportsScreen  />
     </View>
   ); //MinisterOfSportsScreen
 }

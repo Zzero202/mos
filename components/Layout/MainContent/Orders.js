@@ -39,7 +39,7 @@ function Orders() {
     {
       id: '5',
       title: 'وجبة الطعام',
-      image: require('../../../assets/cat5.png'),
+      image: require('../../../assets/foodMeal.png'),
       // press: () => {
       //   fetch('https').then(res => console.log(res));
       // },

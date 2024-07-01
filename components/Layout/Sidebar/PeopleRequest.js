@@ -154,7 +154,10 @@ function PeopleRequest() {
         })}
         <TouchableOpacity style={styles.kitchenCall}>
           <Text style={styles.kitchenTextCall}>استدعاء الخدمات </Text>
-          <Image source={require('../../../assets/bellicon.png')} />
+          <Image
+            style={{width: 20, height: 20, marginRight: 20}}
+            source={require('../../../assets/bellicon.png')}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -175,18 +178,26 @@ const styles = StyleSheet.create({
   },
   kitchenCall: {
     marginTop: 10,
-    backgroundColor: '#eda168',
-    padding: 15,
+    backgroundColor: '#009E3D',
+    paddingTop: 16,
+    paddingBottom: 16,
     borderRadius: 8,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'flex-end',
     alignItems: 'center',
+    shadowColor: '#0000000D',
+    shadowOffset: {width: 3, height: 8},
+    shadowOpacity: 1,
+    shadowRadius: 14,
+    elevation: 14,
   },
   kitchenTextCall: {
-    fontFamily: 'Tajawal-ExtraBold',
-    fontSize: 18,
+    fontFamily: 'Tajawal-Regular',
+    fontWeight: '700',
+    fontSize: 16,
     color: '#fff',
+    marginRight: 35,
   },
 });
 export default PeopleRequest;
