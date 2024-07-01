@@ -2,9 +2,20 @@ import React, {useEffect, useState} from 'react';
 import {HubConnectionBuilder, LogLevel} from '@microsoft/signalr';
 import {ImageBackground, StyleSheet, Alert, Image} from 'react-native';
 import Sound from 'react-native-sound';
+import RNRestart from 'react-native-restart';
 function LogoFullScreen() {
   const [resetConnection, setResetConnection] = useState(false);
   const [isAlertDisplayed, setIsAlertDisplayed] = useState(false);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      RNRestart.restart();
+    }, 15 * 60 * 1000);
+
+    return () => clearInterval(intervalId); 
+  }, []);
+
+
   const connection = new HubConnectionBuilder()
     .withUrl(
       'https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/chathub',
