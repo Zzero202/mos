@@ -8,7 +8,7 @@ function Request() {
         <TouchableOpacity style={styles.requestBox}>
           <Text style={styles.requestText}>محمد العون</Text>
           <Image
-            source={require('../../../assets/shtry.png')}
+            source={require('../../../assets/oon.jpg')}
             style={styles.requestImage}
           />
         </TouchableOpacity>
@@ -16,7 +16,7 @@ function Request() {
           <Text style={styles.requestText}>عبدالله الدريس</Text>
           <Image
             style={styles.requestImage}
-            source={require('../../../assets/dawood.png')}
+            source={require('../../../assets/edrees.jpg')}
           />
         </TouchableOpacity>
       </View>

@@ -27,7 +27,7 @@ function PeopleRequest() {
     {
       id: 1,
       name: 'إبراهيم المعيقل',
-      image: require('../../../assets/naeb.png'),
+      image: require('../../../assets/ibrahim.jpg'),
       press: () => {
         axios
           .post(
@@ -42,7 +42,7 @@ function PeopleRequest() {
     {
       id: 2,
       name: 'وليد بن حزيم',
-      image: require('../../../assets/mosaed.png'),
+      image: require('../../../assets/waleed.jpg'),
       // press: () => {
       //   fetch('https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/api/RequestAttends/ReturnText?Text=Hello')
       //     .then(res => {
@@ -56,7 +56,7 @@ function PeopleRequest() {
     {
       id: 3,
       name: 'نواف الشهراني',
-      image: require('../../../assets/wakelsyasa.png'),
+      image: require('../../../assets/nawaf.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
@@ -70,7 +70,7 @@ function PeopleRequest() {
     {
       id: 4,
       name: 'عبدالله الدريس',
-      image: require('../../../assets/wakemotaded.png'),
+      image: require('../../../assets/edrees.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
@@ -84,7 +84,7 @@ function PeopleRequest() {
     {
       id: 5,
       name: 'محمد العنقري',
-      image: require('../../../assets/wakeldoplamicia.png'),
+      image: require('../../../assets/onkery.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
@@ -98,7 +98,7 @@ function PeopleRequest() {
     {
       id: 6,
       name: 'أحمد حكمي',
-      image: require('../../../assets/wakelmarasem.png'),
+      image: require('../../../assets/hekmy.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
@@ -112,7 +112,7 @@ function PeopleRequest() {
     {
       id: 7,
       name: 'عبده العبسي',
-      image: require('../../../assets/wakelshoon.png'),
+      image: require('../../../assets/absy.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
@@ -126,7 +126,7 @@ function PeopleRequest() {
     {
       id: 8,
       name: 'احمد هوساوي',
-      image: require('../../../assets/takhtet.png'),
+      image: require('../../../assets/user.jpg'),
       // press: () => {
       //   fetch('https')
       //     .then(res => {
