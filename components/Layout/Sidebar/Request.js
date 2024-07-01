@@ -3,7 +3,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 function Request() {
   return (
     <View>
-      <Text style={styles.requestTitle}>استدعاء</Text>
+      <Text style={styles.requestTitle}>فريق العمل</Text>
       <View style={styles.requestMainBox}>
         <TouchableOpacity style={styles.requestBox}>
           <Text style={styles.requestText}>محمد العون</Text>

@@ -9,8 +9,8 @@ function MainContent() {
     <View style={styles.mainContent}>
       <Image style={styles.logo} source={require('../../../assets/logo.png')} />
       <View style={styles.innerContent}>
-        <StatusGuests />
-        <Work />
+        {/* <StatusGuests /> */}
+        {/* <Work /> */}
         <Orders />
       </View>
     </View>

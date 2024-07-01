@@ -140,8 +140,7 @@ function PeopleRequest() {
   ];
   // console.log('ADADADA');
   return (
-    <View style={{marginTop: 16}}>
-      <Text style={styles.requestTitle}>طلب أشخاص</Text>
+    <View>
       <View style={styles.requestMainBox}>
         {data.map(item => {
           return (
@@ -153,6 +152,10 @@ function PeopleRequest() {
             />
           );
         })}
+        <TouchableOpacity style={styles.kitchenCall}>
+          <Text style={styles.kitchenTextCall}>استدعاء الخدمات </Text>
+          <Image source={require('../../../assets/bellicon.png')} />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -167,9 +170,23 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   requestMainBox: {
-    marginTop: 16,
     display: 'flex',
     flexDirection: 'column',
+  },
+  kitchenCall: {
+    marginTop: 10,
+    backgroundColor: '#eda168',
+    padding: 15,
+    borderRadius: 8,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  },
+  kitchenTextCall: {
+    fontFamily: 'Tajawal-ExtraBold',
+    fontSize: 18,
+    color: '#fff',
   },
 });
 export default PeopleRequest;

@@ -36,14 +36,14 @@ function Orders() {
       //   fetch('https').then(res => console.log(res));
       // },
     },
-    // {
-    //   id: '5',
-    //   title: 'الأكل',
-    //   image: require('../../../assets/cat5.png'),
-    //   // press: () => {
-    //   //   fetch('https').then(res => console.log(res));
-    //   // },
-    // },
+    {
+      id: '5',
+      title: 'وجبة الطعام',
+      image: require('../../../assets/cat5.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
     // {
     //   id: '6',
     //   title: 'الإفطار',

@@ -10,10 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "@microsoft/signalr": "^8.0.0",
+    "@microsoft/signalr": "^7.0.2",
     "axios": "^1.7.2",
     "react": "18.2.0",
-    "react-native": "0.72.14"
+    "react-native": "0.72.14",
+    "react-native-sound": "^0.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
