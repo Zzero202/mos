@@ -5,18 +5,15 @@ function Request() {
     <View>
       <Text style={styles.requestTitle}>فريق العمل</Text>
       <View style={styles.requestMainBox}>
-        <TouchableOpacity style={styles.requestBox}>
-          <Text style={styles.requestText}>محمد العون</Text>
+        <TouchableOpacity
+          style={styles.requestBox}
+          onPress={() => {
+            // sendNotification('إبراهيم المعيقل');
+          }}>
+          <Text style={styles.requestText}>إبراهيم المعيقل</Text>
           <Image
-            source={require('../../../assets/oon.jpg')}
+            source={require('../../../assets/ibrahim.jpg')}
             style={styles.requestImage}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.requestBox}>
-          <Text style={styles.requestText}>عبدالله الدريس</Text>
-          <Image
-            style={styles.requestImage}
-            source={require('../../../assets/edrees.jpg')}
           />
         </TouchableOpacity>
       </View>

@@ -38,36 +38,37 @@ function Orders() {
     },
     {
       id: '5',
+      title: 'قهوة أمريكية',
+      image: require('../../../assets/american.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    {
+      id: '6',
+      title: 'قهوة تركية',
+      image: require('../../../assets/turkish.png'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+
+    {
+      id: '7',
+      title: 'مياه عادية',
+      image: require('../../../assets/normal-water.jpg'),
+      // press: () => {
+      //   fetch('https').then(res => console.log(res));
+      // },
+    },
+    {
+      id: '8',
       title: 'وجبة الطعام',
       image: require('../../../assets/foodMeal.png'),
       // press: () => {
       //   fetch('https').then(res => console.log(res));
       // },
     },
-    // {
-    //   id: '6',
-    //   title: 'الإفطار',
-    //   image: require('../../../assets/cat6.png'),
-    //   // press: () => {
-    //   //   fetch('https').then(res => console.log(res));
-    //   // },
-    // },
-    // {
-    //   id: '7',
-    //   title: 'بلاك كوفي',
-    //   image: require('../../../assets/cat7.png'),
-    //   // press: () => {
-    //   //   fetch('https').then(res => console.log(res));
-    //   // },
-    // },
-    // {
-    //   id: '8',
-    //   title: 'قهوة سعودية',
-    //   image: require('../../../assets/cat8.png'),
-    //   // press: () => {
-    //   //   fetch('https').then(res => console.log(res));
-    //   // },
-    // },
   ];
   return (
     <View style={styles.mainOrders}>

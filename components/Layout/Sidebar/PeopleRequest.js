@@ -26,116 +26,67 @@ function PeopleRequest() {
   const data = [
     {
       id: 1,
-      name: 'إبراهيم المعيقل',
-      image: require('../../../assets/ibrahim.jpg'),
+      name: 'وليد بن حزيم',
+      image: require('../../../assets/waleed.jpg'),
       press: () => {
-        axios
-          .post(
-            'https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/api/RequestAttends/ReturnText?Text=معالي النائب',
-          )
-          .then(res => {
-            console.log(res);
-          })
-          .catch(e => console.log(e));
+        // sendNotification('وليد بن حزيم');
       },
     },
     {
       id: 2,
-      name: 'وليد بن حزيم',
-      image: require('../../../assets/waleed.jpg'),
-      // press: () => {
-      //   fetch('https://secondstaging.mersvo.com/PSuiteV2.0/Production/Catering.API/api/RequestAttends/ReturnText?Text=Hello')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      name: 'نواف الشهراني',
+      image: require('../../../assets/nawaf.jpg'),
+      press: () => {
+        // sendNotification('نواف الشهراني');
+      },
     },
     {
       id: 3,
-      name: 'نواف الشهراني',
-      image: require('../../../assets/nawaf.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      name: 'محمد العنقري',
+      image: require('../../../assets/onkery.jpg'),
+      press: () => {
+        // sendNotification('محمد العنقري');
+      },
     },
     {
       id: 4,
       name: 'عبدالله الدريس',
       image: require('../../../assets/edrees.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      press: () => {
+        // sendNotification('عبدالله الدريس');
+      },
     },
     {
       id: 5,
-      name: 'محمد العنقري',
-      image: require('../../../assets/onkery.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      name: 'محمد العون',
+      image: require('../../../assets/oon.jpg'),
+      press: () => {
+        // sendNotification('محمد العون');
+      },
     },
     {
       id: 6,
       name: 'أحمد حكمي',
       image: require('../../../assets/hekmy.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      press: () => {
+        // sendNotification('أحمد حكمي');
+      },
     },
     {
       id: 7,
       name: 'عبده العبسي',
       image: require('../../../assets/absy.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      press: () => {
+        // sendNotification('عبده العبسي');
+      },
     },
     {
       id: 8,
       name: 'احمد هوساوي',
       image: require('../../../assets/user.jpg'),
-      // press: () => {
-      //   fetch('https')
-      //     .then(res => {
-      //       console.log('data');
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
-      // },
+      press: () => {
+        // sendNotification('احمد هوساوي');
+      },
     },
   ];
   // console.log('ADADADA');
