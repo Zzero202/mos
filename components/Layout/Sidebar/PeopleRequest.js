@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   kitchenCall: {
-    marginTop: 10,
+    marginTop: 40,
     backgroundColor: '#009E3D',
     paddingTop: 16,
     paddingBottom: 16,
